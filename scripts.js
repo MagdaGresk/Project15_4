@@ -35,8 +35,15 @@ console.log(average(9, 10, 12, 20))
 //-------PART4----------------
 
 const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1]
-const arrAvg = arr => arr.reduce((a,b) => a + b, 0) / arr.length
-console.log(arrAvg(grades))
+const average = (...args) => {
+
+	const sum = args.reduce((sum, arg) => {
+	return sum + arg
+	})
+
+return (`${sum / args.length}`)
+}
+console.log(average (...grades))
 
 
 //-------PART5----------------
